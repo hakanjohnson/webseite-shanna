@@ -1,0 +1,249 @@
+/** Imports
+*/
+@import url('https://fonts.googleapis.com/css2?family=Changa+One;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Momo+Signature&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Coming+Soon&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jersey+25&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Momo+Trust+Display&display=swap');
+
+/** Globale Farben
+*/
+:root {
+    --bg_nav_color: #f9efe3;
+    --text_normal_color: #000000;
+    --text_kontrast_hell_color: #000000;
+    --farbe_kontrast_beige_1: #e9aa75;
+}
+
+html, body {
+    height: 100%;
+    color: var(--text_kontrast_hell_color);
+    scroll-behavior: smooth;
+    font-size: 16px;
+    display: flex;
+}
+
+
+/** Global Styles
+"Momo Trust Display"
+*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--text_normal_color);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--bg_nav_color);
+    padding: 6px 20px;
+    position: fixed;
+    width: 100%;
+    height: 120px;
+    top: 0;
+    box-shadow: 0 2px 16px 4px #000000;
+    z-index: 1000;
+}
+
+.logo {
+    display: inline;
+}
+
+.heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.menu-btn {
+    background: none;   /* Kein Button-Hintergrund */
+    border: none;
+    display: inline;
+    cursor: pointer;
+}
+
+.menu-btn:hover, #mail:hover {
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+.all-heading {
+    display: flex;
+    gap: 15px;
+
+}
+.cards {
+    margin-top: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+
+/** CArd Style
+*/
+.card {
+    width: 250px;
+    height: 350px;
+    overflow: hidden;
+    background-color: #e9aa75;
+    padding: 20px;
+    margin: 20px;
+}
+
+.box {
+    height: fit-content;
+    width: 100%;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.card-text h2{
+    margin-top: 15px;
+    color: #fffffe;
+    font-size: 16px;
+    text-align: center;
+}
+
+content h2 {
+    display: inline;   
+}
+
+.divider {
+    height: max-content;
+    overflow: hidden;
+}
+
+.divider img {
+    margin-top: 120px;
+}
+
+.submit {
+    background-image: linear-gradient(45deg, #ca97fc, #6a35a0);
+}
+
+.submit:hover {
+    cursor: pointer;
+}
+
+.menu-hidden {
+  display: none;
+  background-color: var(--bg_nav_color);
+  list-style: none;
+  padding: 10px;
+  margin: 0;
+  position: absolute;  /* Optional: Dropdown überlagert andere Inhalte */
+  width: 200px;
+  z-index: 900;
+}
+
+.menu-container:focus-within .menu-hidden {
+  display: block;  /* Sichtbar beim Hover über den Container */
+}
+
+
+input, textarea ,#betreff {
+    color: rgb(0, 0, 0);
+    width: 100%;
+    max-width: 100%;
+    padding: 10px;
+    margin: 0 0 20px 0;
+    border: 1px solid #000000;
+    border-radius: 2px;
+    font-size: 16px;
+}
+
+input:hover, textarea:hover ,#betreff:hover {
+    cursor: pointer;
+    outline: var(--farbe_kontrast_beige_1);
+}
+
+input:focus-within, textarea:focus-within ,#betreff:focus-within {
+    outline: 2px solid #d662de;
+}
+
+label {
+    color: #000000;
+    display: block;
+    margin-bottom: 2px;
+}
+
+.form-wrapper {
+    padding: 20px 10px;
+    display: flex;
+    justify-content: center;
+    background-color: var(--bg_nav_color);
+    width: 100%;
+}
+.wrapper {
+    display: inline;
+    width: 100%;
+}
+
+h1, h3 {
+    color:black;
+    display: block;
+    letter-spacing: 1rem;
+}
+
+.Shanna {
+    text-align: center;
+}
+
+.Shanna h3 {
+    letter-spacing: 0.6rem;
+}
+
+footer {
+    width: 100%;
+    background-color: #0e0c09;
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 20px;
+    margin-top: 5px;
+}
+
+footer p {
+    color: #ffffff;
+}
+
+#sub-menu {
+    position: absolute;
+    top: 120px;
+    left: 0;
+}
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 70vh; /* Höhe des Hero-Bereichs */
+    background-image: url ('hero.jpg'); /* Pfad zum Hintergrundbild */
+    background-size: cover;
+    background-position: center;
+}
+
+
+.hero-text {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white; /* oder eine andere Farbe */
+    font-size: 2rem;
+    font-weight: 700;
+    text-shadow: 0 0 20px rgba(0, 0, 0, 5); /* besser lesbar */
+}
