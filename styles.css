@@ -1,303 +1,277 @@
-/** Imports
-*/
-@import url('https://fonts.googleapis.com/css2?family=Changa+One;1&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Momo+Signature&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Coming+Soon&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Jersey+25&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Momo+Trust+Display&display=swap');
+/* styles.css */
+/* Importing the Stack Sans Notch font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Stack+Sans+Notch:wght@200..700&display=swap');
 
-/** Globale Farben
-*/
-:root {
-    --bg_nav_color: #f9efe3;
-    --text_normal_color: #000000;
-    --text_kontrast_hell_color: #000000;
-    --farbe_kontrast_beige_1: #e9aa75;
-}
+/* root */
 
-html, body {
-    height: 100%;
-    color: var(--text_kontrast_hell_color);
-    scroll-behavior: smooth;
-    font-size: 16px;
-
-}
-
-body {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-/** Global Styles
-"Momo Trust Display"
-*/
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    color: var(--text_normal_color);
-}
-
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: var(--bg_nav_color);
-    padding: 6px 20px;
-    position: fixed;
-    width: 100%;
-    height: 120px;
-    top: 0;
-    box-shadow: 0 0 4px 1px #a7a7a7;
-    z-index: 1000;
-}
-
-.logo {
-    display: inline;
-}
-
-.heading {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 15px;
-}
-
-.menu-btn {
-    background: none;   /* Kein Button-Hintergrund */
-    border: none;
-    display: inline;
-    cursor: pointer;
-}
-
-.menu-btn:hover, #mail:hover {
-    opacity: 0.7;
-    cursor: pointer;
-}
-
-.all-heading {
-    display: flex;
-    gap: 15px;
-
-}
-.cards {
-    margin-top: 100px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-}
-
-
-/** CArd Style
-*/
-.card {
-    width: 250px;
-    height: 350px;
-    overflow: hidden;
-    background-color: #e9aa75;
-    padding: 20px;
-    margin: 20px;
-}
-
-.box {
-    height: fit-content;
-    width: 100%;
-    background-color: #ffffff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px 0;
-}
-
-.card-text h2{
-    margin-top: 15px;
-    color: #fffffe;
-    font-size: 16px;
-    text-align: center;
-}
-
-content h2 {
-    display: inline;   
-}
-
-.divider {
-    height: max-content;
-    overflow: hidden;
-}
-
-.divider img {
-    margin-top: 120px;
-}
-
-.submit {
-    background-image: linear-gradient(45deg, #ca97fc, #6a35a0);
-}
-
-.submit:hover {
-    cursor: pointer;
-}
-
-.menu-hidden {
-  display: none;
-  background-color: var(--bg_nav_color);
-  list-style: none;
-  padding: 10px;
-  margin: 0;
-  position: absolute;  /* Optional: Dropdown überlagert andere Inhalte */
-  width: 200px;
-  z-index: 900;
-}
-
-.menu-container:focus-within .menu-hidden {
-  display: block;  /* Sichtbar beim Hover über den Container */
-}
-
-
-input, textarea ,#betreff {
-    color: rgb(0, 0, 0);
-    width: 100%;
-    max-width: 100%;
-    padding: 10px;
-    margin: 0 0 20px 0;
-    border: 1px solid #000000;
-    border-radius: 2px;
+    font-family: system-ui, "Stack Sans Notch", sans-serif;
+    font-optical-sizing: auto;
     font-size: 16px;
 }
 
-input:hover, textarea:hover ,#betreff:hover {
-    cursor: pointer;
-    outline: var(--farbe_kontrast_beige_1);
-}
-
-input:focus-within, textarea:focus-within ,#betreff:focus-within {
-    outline: 2px solid #d662de;
-}
-
-label {
-    color: #000000;
-    display: block;
-    margin-bottom: 2px;
-}
-
-.form-wrapper {
-    padding: 20px 10px;
+body {
+    scroll-behavior: smooth;
+    background-color: #e0e0e0;
     display: flex;
+    width: 100%;
+    flex-direction: column;
     justify-content: center;
-    background-color: var(--bg_nav_color);
-    width: 100%;
-}
-.wrapper {
-    display: inline;
-    width: 100%;
+    align-items: center;
 }
 
-h1, h3 {
-    color:black;
-    display: block;
-
-}
-
-.hero-button {
-    margin-top: 20px;
-    padding: 10px 20px;
-    font-size: 1rem;
-    background-color: var(--farbe_kontrast_beige_1);
-    border: none;
-    border-radius: 4px;
-    color: #ffffff;
-    cursor: pointer;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.137);
-}
-
-.Shanna {
-    text-align: center;
-}
-
-.Shanna h3, .Shanna h1 {
-    letter-spacing: 0.6rem;
-}
-
-footer {
-    width: 100%;
-    background-color: #0e0c09;
-    color: #ffffff;
+main {
     display: flex;
-    justify-content: space-between;
-    padding: 5px 20px;
-    margin-top: 5px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
 }
 
-footer p {
-    color: #ffffff;
-}
-
-#sub-menu {
-    position: absolute;
-    top: 120px;
-    left: 0;
-}
-
-.hero {
+.about {
     background-image: url(hero_bild_1.avif);
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
+    margin: 0 0 25px 0;
+    height: 100dvh;
+    display: flex;
     width: 100%;
-    height: 500px;
-    margin-top: 120px;
-    padding: 100px 0;
-    text-align: center;
-    color: white; /* oder eine andere Farbe */
-    font-size: 2rem;
-    font-weight: 700;
-    text-shadow: 0 0 px rgba(0, 0, 0, 5); /* besser lesbar */
+    flex-direction: column;
+    justify-content: center;
+}
+
+.content {
+    width: 90%;
+    height: auto;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.story  {
+    background-image: linear-gradient(45deg, #5dd2b5, #1b8e71, #5dd2b5);
+    width: 90%;
+    height: auto;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.skill, .greeting{
+    background-color: #ededed;
+    width: 90%;
+    height: auto;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .kontakt {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    background-image: linear-gradient(45deg, #e9d26c, #e88923, #e9d26c);
 }
 
-.block {
-    top: 5050px;
-    height: 250px;
-    width: 100%;
-    background-color: yellow;
+.name {
+    font-size: 4rem;
 }
 
-@media (max-width: 768px) {
-    footer {
-    width: 100%;
-    background-color: #0e0c09;
-    color: #ffffff;
+.titel {
+    font-size: 2rem;
+}
+
+.spruch {
+    font-size: 1rem;
+}
+
+.name, .titel, .spruch {
+    text-shadow: 1px 1px 8px #161414;
+}
+
+body {
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    padding: 5px 20px;
-    margin-top: 5px;
-}
-    .kontakt p {
-    display: none;
-}
-    .menu-text {
-    display: none;
-}   
-    .hero-text {
-    position: absolute;
-    top: 70%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    justify-content: center;
     text-align: center;
-    color: white; /* oder eine andere Farbe */
-    font-size: 1.5rem;
-    font-weight: 700;
-    text-shadow: 0 0 20px rgba(0, 0, 0, 5); /* besser lesbar */
+    width: 100%;
 }
+section {
+    min-height: auto;
+    box-shadow: 2px 2px 5px #0000001a;
+}
+
+header>nav>ul>li {
+    display: inline;
+    margin: 0 15px; 
+}
+
+.pp {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border: solid 3px #ffffff;
+    border-radius: 100%;
+    margin-bottom: 20px;
+}
+
+.content {
+    padding: 2rem 20px;
+    margin: 25px auto;
+    box-shadow: 2px 2px 5px #939191;
+}
+
+.hero {
+    width: 100%;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+    color: honeydew;
+}
+h1 {
+    font-size: 2.0rem;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 1.0rem;
+    margin-bottom: 10px;
+}
+
+footer {
+    margin: 20px 0 0 0;
+    padding: 20px;
+    text-align: left;
+    width: 100%;
+    background-color: #1b1919;
+    color: honeydew;
+}
+
+.copy
+{
+    font-size: 0.7rem;
+    color: honeydew;
+}
+
+.footer-group {
+    margin: 30px 0 0 0;
+}
+
+.footer-group * {
+    margin: 5px 0;
+    font-size: 0.8rem;
+}
+
+.bmore, .bkontakt {
+    margin: 20px 10px 0 0;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 2px;
+    min-width: 150px;
+    max-width: 150px;
+    background-color: #262626;
+    color: #ffffff;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.bmore:hover, .bkontakt:hover {
+    background-color: #ededed;
+    color: #262626;
+}
+
+.bgGelb {
+    background-color: #ededed
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 20px auto;
+    
+}
+
+.inname, input, textarea, select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 2rem;
+}
+
+#yes {
+    display: inline-block;
+}
+
+label {
+    align-self: flex-start;
+    margin-left: 10px;
+    font-size: 0.9rem;
+}
+
+#submit {
+    width: auto;
+    padding: 10px 20px;
+    background-color: #1f1f21;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#submit:hover {
+    background-color: #8155c7;
+}
+
+/* Karussell */
+.carousel-container {
+    width: 90%;
+    overflow: visible;
+    padding: 10px 0;
+}
+
+.carousel {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+
+}
+
+.carousel::-webkit-scrollbar {
+    display: none;
+
+}
+
+.card {
+    width: 100px;
+    flex: 0 0 100%;
+    scroll-snap-align: start;
+    box-shadow: 2px 2px 10px #080606d4;
+    overflow: hidden;
+    color: #303030;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    max-width: 400px;
+    object-fit: cover;
 
 }

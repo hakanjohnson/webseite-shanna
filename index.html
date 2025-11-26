@@ -1,75 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-5">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shannas Holzpoesie</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Shannas Holpoesie</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="slider.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=waving_hand" />
 </head>
 <body>
-    <nav>
-        <div class="menu-container">
-        <img class="menu-btn" aria-label="Menü öffnen" src="menu.svg" alt="">
-        <p class="menu-text">Menü</p>    
-        <ul id="sub-menu" class="menu-hidden">
-            <li>Über Mich</li>
-            <li>Meine Kollektion</li>
-            <li><a href="#Kontakt">Kontakt</a></li>
-            <li>Impressum</li>
-        </ul>
-        </div>
-
-        <div class="heading">
-        <img class="logo" src="logo2.jpg" alt="logo" width="80px">
-        <div class="Shanna">
-            <h1>SHANNAS</h1>
-            <h3>HOLZ POESIE</h3>
-        </div>
-        </div>
-        <div class="kontakt">
-            <a href="#Kontakt"><img id="mail" src="mail.svg" alt="briefumschlag"></a>
-            <p>Kontakt</p>
-        </div>
-    </nav>
-    <div class="hero">
-        <h1>Deko- und Geschenkideen</h1>
-        <p>aus Holz und Trockenblumen</p>
-        <p>Jedes Teil ein Unikat, Liebevolle Handarbeit</p>
-        <div>
-            <button class="hero-button">Meine Kollektion</button>
-            <button class="hero-button">Mein Instagram</button>
-        </div>
-    </div>
-    <div class="wrapper">
-    <div class="form-wrapper">
-        <form id="Kontakt">
-            <h3>Kontaktiere Mich</h3>
-            <br>
-            <label>Betreff *</label>
-            <select id="betreff" name="betreff" required>
-                <option value="">Bitte wählen...</option>
-                <option value="Allgemeine Anfrage">Allgemeine Anfrage</option>
-                <option value="Workshop Anfrage">Workshop Anfrage</option>
-                <option value="Produkt Anfrage">Produkt Anfrage</option>
-            </select>
-            <label>Dein Name *</label>
-            <input type="text" required><br>
-            <label for="">Deine E-Mail *</label>
-            <input type="email" required><br>
-            <label for="">Deine Nachricht an Mich *</label>
-            <textarea id="message" name="message" rows="5" cols="50" required></textarea>
-            <input class="submit" type="submit" value="Senden" width="100%" required>
-            <p>*Pflichtfelder</p>
-        </form>
-    </div>
-    </div>
+    <main>
+        <section class="about">
+            <h1 class="name">Shannas Holzpoesie</h1>
+            <h2 class="titel">Jedes Teil ein Unikat</h2>
+            <p class="spruch">Deko- & Geschenkideen aus Holz und Trockenblumen</p>
+        </section>
+        <section class="content greeting">
+            <h1>Herzlich Willkommen</h1>
+            <img class="pp" src="pp.jpg" alt="">
+            <p>Ich bin Shanna und leidenschaftliche Bastlerin. Ich erstelle tolle Dekoelemente aus liebervoller Handarbeit.</p>
+        </section>
+        <section class="content arbeit">
+            <h2>Arbeit</h2>
+            <h1>Meine Kunstwerke</h1>
+            <div class="carousel-container">
+                <h2>Herzanhänger</h2>
+                <div class="carousel">
+                    <div class="card"><img src="img/PXL_20250417_082224271.JPG" alt=""></div>
+                    <div class="card"><img src="img/20250314_183839.JPG" alt=""></div>
+                    <div class="card"><img src="img/20250314_184538.JPG" alt=""></div>
+                    <div class="card"><img src="img/PXL_20250710_064700671 (1) (1) (1).JPG" alt=""></div>
+                    <div class="card"><img src="img/PXL_20251125_215613890.JPG" alt=""></div>
+                    <div class="card"><img src="img/PXL_20250710_064700671 (1) (1) (1).JPG" alt=""></div>
+                </div>
+            </div>
+            <div class="carousel-container">
+                <h2>Brillenparkplätze</h2>
+                <div class="carousel">
+                    <div class="card"><img src="img/20250108_101839.JPG" alt=""></div>
+                    <div class="card"><img src="img/20250108_101854.JPG" alt=""></div>
+                    <div class="card"><img src="img/20250126_173738.JPG" alt=""></div>
+                    <div class="card"><img src="img/20250126_173757.JPG" alt=""></div>
+                    <div class="card"><img src="img/PXL_20251008_135619967.JPG" alt=""></div>
+                    <div class="card"><img src="img/PXL_20251008_135633207.JPG" alt=""></div>
+                </div>
+            </div>
+            <div class="carousel-container">
+                <h2>Serviertenhalter</h2>
+                <div class="carousel">
+                    <div class="card"><img src="" alt=""></div>
+                    <div class="card"><img src="" alt=""></div>
+                    <div class="card"><img src="" alt=""></div>
+                    <div class="card"><img src="" alt=""></div>
+                </div>
+            </div>
+        </section>
+        <section class="content kontakt">
+            <h2>Nachricht</h2>
+            <h1>Schreib Mir</h1>
+            <p>Fülle das Formular aus und ich melde mich bei dir</p>
+            <div class="formular">
+                <form action="sendForm.php">
+                    <label for="">Vorname *</label>
+                    <input class="inname" type="text" required>
+                    <label for="">Nachname *</label>
+                    <input class="inname" type="text" required>
+                    <label for="">E-Mail *</label>
+                    <input type="email" required>
+                    <label for="">Telefonnummer (optional)</label>
+                    <input type="tel" placeholder="+49 0123 4567 89">
+                    <label for="betreff">Worum geht es *</label>
+                    <select name="" id="" required>
+                        <option value="">Bitte wählen...</option>
+                        <option value="">Auftrags Anfrage</option>
+                        <option value="">Anmeldung Workshop</option>
+                        <option value="">Allgemeine Anfrage</option>
+                    </select>
+                    <label for="">Nachricht *</label>
+                    <textarea name="" id="" rows="6" required></textarea>
+                    <p>* Pflichtangaben</p>
+                        <input id="yes" type="checkbox" required>
+                        <p>Ich akzeptiere die Nutzungsbedingungen</p>
+                    <input id="submit" name="submit" type="submit" value="Senden">
+                </form>
+            </div>
+        </section>
+    </main>
     <footer>
-        <p>Impressum</p>
-        <p>AGB</p>
-        <p>Datenschutz</p>
-        <p>© 2025 Shannas Holz Poesie</p>
+        <div class="footer-group">
+            <h4>Kontakt</h4>
+            <p>&#x2709; mail@shannas-holzpoesie.de</p>
+            <p>&#x260E; +49 176 1234 5678</p>
+        </div>
+        <div class="footer-group">
+            <h4>Rechtliches</h4>
+            <p>Impressum</p>
+            <p>Datenshutz</p>
+            <p>Nutzungsbedingungen</p>
+            <p>AGB</p>
+        </div>
+        <div>
+            <p class="footer-group copy">© 2025 Shannas Holzpoesie. Alle Rechte vorbehalten.</p>
+        </div>
     </footer>
 </body>
 </html>
