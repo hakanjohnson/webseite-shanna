@@ -7,7 +7,7 @@
 :root {
     /*Hauptfarben*/
     --color1: #EAAE7A;
-    --color2: #fffaea;
+    --color2: #f8eeee;
     --color3: #42392A;
     --color4: #776D61;
     --color5: #AE9B8A;
@@ -73,6 +73,7 @@ main {
     position: absolute;
     top: 0;
     width: 100%;
+    background-color: var(--color2);
 }
 
 .story  {
@@ -138,6 +139,7 @@ nav {
     display: flex;
     justify-content: space-between;
     padding: 10px 10px;
+    align-items: center;
  
 }
 
@@ -188,6 +190,10 @@ footer {
 {
     font-size: 0.7rem;
     color: honeydew;
+}
+
+.logo {
+    width: 50px;
 }
 
 .footer-group {
