@@ -4,6 +4,19 @@
 
 /* root */
 
+:root {
+    /*Hauptfarben*/
+    --color1: #EAAE7A;
+    --color2: #fffaea;
+    --color3: #42392A;
+    --color4: #776D61;
+    --color5: #AE9B8A;
+
+    /*Nebenfarben*/
+    --color_n_1: #351748;
+    --color_n_2: #ad0d9d;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -15,12 +28,14 @@
 
 body {
     scroll-behavior: smooth;
-    background-color: #e0e0e0;
+    background-image: linear-gradient(to bottom, var(--color_n_1), var(--color1));
     display: flex;
     width: 100%;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin: 0 auto;
+    text-align: center;
 }
 
 main {
@@ -32,15 +47,15 @@ main {
 }
 
 .about {
-    background-image: url(hero_bild_1.avif);
+    /*background-image: url(img/PXL_20251113_212601069.JPG);
     background-size: cover;
-    background-position: center;
+    background-position: center;*/
     margin: 0 0 25px 0;
     height: 100dvh;
     display: flex;
     width: 100%;
     flex-direction: column;
-    justify-content: center;
+    justify-content:space-between;
 }
 
 .content {
@@ -65,7 +80,7 @@ main {
 }
 
 .skill, .greeting{
-    background-color: #ededed;
+    background-color: var(--color1);
     width: 90%;
     height: auto;
     border-radius: 10px;
@@ -76,7 +91,7 @@ main {
 }
 
 .kontakt {
-    background-image: linear-gradient(45deg, #e9d26c, #e88923, #e9d26c);
+    background-image: linear-gradient(45deg, var(--color1), var(--color2));
 }
 
 .name {
@@ -92,26 +107,33 @@ main {
 }
 
 .name, .titel, .spruch {
-    text-shadow: 1px 1px 8px #161414;
+    /*Chrome IE...*/
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /*FF*/
+    background-clip: text;
+    color: transparent;
 }
 
-body {
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    width: 100%;
+.titel, .spruch {
+    background-image: linear-gradient(to right, var(--color1), var(--color_n_2));
 }
+
+.name {
+    background-image: linear-gradient(to right, var(--color2));
+}
+
 section {
     min-height: auto;
-    box-shadow: 2px 2px 5px #0000001a;
 }
 
-header>nav>ul>li {
-    display: inline;
-    margin: 0 15px; 
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px;
 }
+
 
 .pp {
     width: 250px;
@@ -125,7 +147,7 @@ header>nav>ul>li {
 .content {
     padding: 2rem 20px;
     margin: 25px auto;
-    box-shadow: 2px 2px 5px #939191;
+
 }
 
 .hero {
@@ -152,7 +174,7 @@ footer {
     padding: 20px;
     text-align: left;
     width: 100%;
-    background-color: #1b1919;
+    background-image: linear-gradient(45deg, var(--color3) 20%, var(--color4));
     color: honeydew;
 }
 
