@@ -8,7 +8,7 @@
     /*Hauptfarben*/
     --color1: #EAAE7A;
     --color2: #f8eeee;
-    --color3: #42392A;
+    --color3: #000000;
     --color4: #776D61;
     --color5: #AE9B8A;
 
@@ -24,11 +24,12 @@
     font-family: system-ui, "Stack Sans Notch", sans-serif;
     font-optical-sizing: auto;
     font-size: 16px;
+    scroll-behavior: smooth;
 }
 
 body {
     scroll-behavior: smooth;
-    background-image: linear-gradient(to bottom, var(--color_n_1), var(--color1));
+    background-color: var(--color2);
     display: flex;
     width: 100%;
     flex-direction: column;
@@ -36,6 +37,7 @@ body {
     align-items: center;
     margin: 0 auto;
     text-align: center;
+    position: relative;
 }
 
 main {
@@ -47,16 +49,30 @@ main {
 }
 
 .about {
-    /*background-image: url(img/PXL_20251113_212514182.JPG);
+    /*background-image: url(img/hero3\ \(2\).jpg);
     background-size: cover;
     background-position: center;*/
     margin: 0 0 25px 0;
+    overflow: hidden;
+    z-index: 1;
     height: auto;
     display: flex;
+    position: relative;
     width: 100%;
     height: 100dvh;
     flex-direction: column;
     justify-content: center;
+}
+
+.about::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("img/hero3\ \(2\).jpg");
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.3) blur(1px); /* Abdunkeln + Unschärfe */
+    z-index: -1;
 }
 
 .content {
@@ -70,6 +86,8 @@ main {
 }
 
 .navigation {
+    display: flex;
+    justify-content: center;
     position: absolute;
     top: 0;
     width: 100%;
@@ -99,7 +117,7 @@ main {
 }
 
 .kontakt {
-    background-image: linear-gradient(45deg, var(--color1), var(--color2));
+    background-color: #814272;
 }
 
 .name {
@@ -137,16 +155,26 @@ section {
 
 nav {
     display: flex;
+    height: auto;
     justify-content: space-between;
-    padding: 10px 10px;
     align-items: center;
+    padding: 10px 10px;
+    z-index: 2;
+    position: absolute;
+    width: 90%;
+    background-color: var(--color2);
+    box-shadow: 0 0 1px 10px 10px #000000;
+    border-radius: 0 0 5px 5px;
  
+}
+.submenu {
+  display: none;
 }
 
 .pp {
     width: 250px;
     height: 250px;
-    object-fit: cover;
+    object-fit:scale-down;
     border: solid 3px #ffffff;
     border-radius: 100%;
     margin-bottom: 20px;
@@ -165,7 +193,7 @@ nav {
 
 a {
     text-decoration: none;
-    color: honeydew;
+    color: var(--color3);
 }
 h1 {
     font-size: 2.0rem;
@@ -182,14 +210,14 @@ footer {
     padding: 20px;
     text-align: left;
     width: 100%;
-    background-image: linear-gradient(45deg, var(--color3) 20%, var(--color4));
-    color: honeydew;
+    background-color: var(--color1);
+    color: var(--color3);
 }
 
 .copy
 {
     font-size: 0.7rem;
-    color: honeydew;
+    color: var(--color3);
 }
 
 .logo {
@@ -272,13 +300,13 @@ label {
 }
 
 /* Karussell */
-.carousel-container {
+.carousell-container {
     width: 90%;
     overflow: visible;
     padding: 10px 0;
 }
 
-.carousel {
+.carousell {
     display: flex;
     gap: 20px;
     overflow-x: auto;
@@ -287,7 +315,7 @@ label {
 
 }
 
-.carousel::-webkit-scrollbar {
+.carousell::-webkit-scrollbar {
     display: none;
 
 }
@@ -311,4 +339,9 @@ label {
     border: #e0be4ea4 3px solid;
     border-radius: 10px;
 
+}
+
+header {
+  position: relative;
+  overflow: hidden;
 }
