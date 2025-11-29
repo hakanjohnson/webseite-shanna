@@ -53,6 +53,7 @@ main {
     background-size: cover;
     background-position: center;*/
     margin: 0 0 25px 0;
+    padding: 25px 0 0 0;
     overflow: hidden;
     z-index: 1;
     height: auto;
@@ -116,20 +117,29 @@ main {
     align-items: center;
 }
 
+.button_gold {
+    background-color: #00000094;
+    margin: 20px auto;
+    padding: 8px;
+    border: none;
+    cursor: pointer;
+    color: var(--color1)
+}
+
 .kontakt {
-    background-color: #814272;
+    background-color: var(--color2);
 }
 
 .name {
-    font-size: 4rem;
-}
-
-.titel {
     font-size: 2rem;
 }
 
-.spruch {
+.titel {
     font-size: 1rem;
+}
+
+.spruch {
+    font-size: 0.8rem;
 }
 
 .name, .titel, .spruch {
@@ -151,21 +161,24 @@ main {
 
 section {
     min-height: auto;
+    margin: 0 20px;
+}
+
+.gallerie {
+    min-height: auto;
 }
 
 nav {
     display: flex;
     height: auto;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    padding: 10px 10px;
+    padding: 5px 0 0 0;
     z-index: 2;
     position: absolute;
-    width: 90%;
+    width: 100%;
     background-color: var(--color2);
-    box-shadow: 0 0 1px 10px 10px #000000;
-    border-radius: 0 0 5px 5px;
- 
+
 }
 .submenu {
   display: none;
@@ -175,9 +188,10 @@ nav {
     width: 250px;
     height: 250px;
     object-fit:scale-down;
-    border: solid 3px #ffffff;
+    border: solid 5px var(--color1);
     border-radius: 100%;
     margin-bottom: 20px;
+    box-shadow: 0 0 20px 2px black;
 }
 
 .content {
@@ -208,10 +222,33 @@ h2 {
 footer {
     margin: 20px 0 0 0;
     padding: 20px;
+    text-align: center;
+    width: 100%;
+    background-color: var(--color1);
+    color: var(--color3);
+}
+
+@media (min-width: 400px) {
+    footer {
+    display: flex;
+    margin: 20px 0 0 0;
+    padding: 20px;
     text-align: left;
     width: 100%;
     background-color: var(--color1);
     color: var(--color3);
+}
+.name {
+    font-size: 4rem;
+}
+
+.titel {
+    font-size: 2rem;
+}
+
+.spruch {
+    font-size: 1rem;
+}
 }
 
 .copy
@@ -301,14 +338,13 @@ label {
 
 /* Karussell */
 .carousell-container {
-    width: 90%;
+    width: 100%;
     overflow: visible;
     padding: 10px 0;
 }
 
 .carousell {
     display: flex;
-    gap: 20px;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
@@ -336,8 +372,6 @@ label {
     max-height: 400px;
     max-width: 400px;
     object-fit: cover;
-    border: #e0be4ea4 3px solid;
-    border-radius: 10px;
 
 }
 
