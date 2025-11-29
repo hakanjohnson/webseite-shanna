@@ -8,7 +8,7 @@
     /*Hauptfarben*/
     --color1: #EAAE7A;
     --color2: #f8eeee;
-    --color3: #000000;
+    --color3: #ff0000;
     --color4: #776D61;
     --color5: #AE9B8A;
 
@@ -53,7 +53,7 @@ main {
     background-size: cover;
     background-position: center;*/
     margin: 0 0 25px 0;
-    padding: 25px 0 0 0;
+    padding: 25px 10px 0 10px;
     overflow: hidden;
     z-index: 1;
     height: auto;
@@ -167,7 +167,6 @@ main {
 
 section {
     min-height: auto;
-    padding: 20px 20px;
 }
 
 .gallerie {
@@ -179,9 +178,9 @@ section {
 nav {
     display: flex;
     height: auto;
-    justify-content: left;
+    justify-content: space-between;
     align-items: center;
-    padding: 10px;
+    padding: 5px 10px;
     z-index: 2;
     position: absolute;
     width: 100%;
@@ -190,38 +189,51 @@ nav {
 }
 .submenu {
     display: none;
+
 }
 
-.submenu:hover  {
-    display: block;
+@media (min-width: 500px) { 
+
+.submenu {
+    display: flex;
+    color: var(--color2);
+    justify-content: space-evenly;
+}
+
+ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+li>a {
     color: var(--color2);
     list-style: none;
-    text-align: left;
-    position: absolute;
-    left: 0;
-    top: 60px;
-    padding: 0 15px;
-    background-color: black;
-    width: auto;
-    height: 100dvh;
-    opacity: 0.9;
+    font-size: 1.2rem;
 }
 
-.submenu>li>a:focus-within {
-    margin: 10px 0;
-    font-size: 1.2rem;
-    text-decoration: none;
-    color: var(--color2);
+li>a:hover{
+    color: var(--color_n_2);
+}
+li {
+    list-style: none;
+    display: inline;
+    margin-left: 25px;
+}
+
+.menuicon {
+    display: none;
+}
+
 }
 
 .pp {
     width: 250px;
     height: 250px;
-    object-fit:scale-down;
-    border: solid 5px var(--color1);
+    object-fit: scale-down;
+    border: solid 5px var(--color_n_2);
     border-radius: 100%;
     margin-bottom: 20px;
-    box-shadow: 0 0 20px 2px black;
+    box-shadow: 0 0 20px 1px black;
 }
 
 .content {
@@ -237,11 +249,12 @@ nav {
 
 a {
     text-decoration: none;
-    color: var(--color3);
+    color: var(--color2);
 }
 h1 {
     font-size: 2.0rem;
     margin-bottom: 10px;
+    color: var(--color4);
 }
 
 h2 {
@@ -249,13 +262,14 @@ h2 {
     margin-bottom: 10px;
 }
 
+
 footer {
     margin: 20px 0 0 0;
     padding: 20px;
     text-align: center;
     width: 100%;
-    background-color: var(--color1);
-    color: var(--color3);
+    background-color: var(--color_n_2);
+    color: var(--color2);
 }
 
 @media (min-width: 400px) {
@@ -281,10 +295,10 @@ footer {
 }
 }
 
-.copy
+.copy 
 {
     font-size: 0.7rem;
-    color: var(--color3);
+    color: var(--color2);
 }
 
 .logo {
@@ -298,24 +312,6 @@ footer {
 .footer-group * {
     margin: 5px 0;
     font-size: 0.8rem;
-}
-
-.bmore, .bkontakt {
-    margin: 20px 10px 0 0;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 2px;
-    min-width: 150px;
-    max-width: 150px;
-    background-color: #262626;
-    color: #ffffff;
-    font-size: 1rem;
-    cursor: pointer;
-}
-
-.bmore:hover, .bkontakt:hover {
-    background-color: #ededed;
-    color: #262626;
 }
 
 .bgGelb {
@@ -363,7 +359,7 @@ label {
 }
 
 #submit:hover {
-    background-color: #8155c7;
+    background-color: var(--color_n_2)
 }
 
 /* Karussell */
@@ -407,3 +403,5 @@ header {
   position: relative;
   overflow: hidden;
 }
+
+
