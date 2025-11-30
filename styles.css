@@ -6,11 +6,11 @@
 
 :root {
     /*Hauptfarben*/
-    --color1: #EAAE7A;
+    --color1: #e9c2a1;
     --color2: #f8eeee;
     --color3: #ff0000;
     --color4: #776D61;
-    --color5: #AE9B8A;
+    --color5: #7f6f62;
 
     /*Nebenfarben*/
     --color_n_1: #351748;
@@ -76,6 +76,15 @@ main {
     z-index: -1;
 }
 
+.header1_farbe {
+    color: var(--color_n_2);
+    
+}
+
+p {
+    color: var(--color5);
+}
+
 .content {
     width: 90%;
     height: auto;
@@ -115,7 +124,7 @@ main {
     align-items: center;
 }
 
-.button_gold {
+.button_gold, #submit {
     background-color: var(--color_n_2);
     width: auto;
     height: auto;
@@ -129,7 +138,6 @@ main {
     color: var(--color2);
     font-weight: bold;
     border-radius: 5px;
-    box-shadow: 0 0 30px 4px black;
 }
 
 .kontakt {
@@ -172,7 +180,8 @@ section {
 .gallerie {
     min-height: auto;
     background-color: var(--color1);
-    color: var(--color2);
+    color: var(--color5);
+    padding: 30px 0;
 }
 
 nav {
@@ -249,12 +258,12 @@ li {
 
 a {
     text-decoration: none;
-    color: var(--color2);
+    color: var(--color5);
 }
 h1 {
     font-size: 2.0rem;
     margin-bottom: 10px;
-    color: var(--color4);
+    color: var(--color_n_2);
 }
 
 h2 {
@@ -263,13 +272,13 @@ h2 {
 }
 
 
-footer {
+footer, footer-group {
     margin: 20px 0 0 0;
     padding: 20px;
     text-align: center;
     width: 100%;
-    background-color: var(--color_n_2);
-    color: var(--color2);
+    background-color: var(--color1);
+    color: var(--color5);
 }
 
 @media (min-width: 400px) {
@@ -298,7 +307,7 @@ footer {
 .copy 
 {
     font-size: 0.7rem;
-    color: var(--color2);
+    color: var(--color5);
 }
 
 .logo {
@@ -336,30 +345,31 @@ form {
     border-radius: 4px;
     cursor: pointer;
     margin-bottom: 2rem;
+    color: var(--color5);
+}
+
+.nb {
+    margin: 40px 0 0 0;
+    display: flex;
+    justify-content: flex-start;
 }
 
 #yes {
     display: inline-block;
 }
 
+.stern {
+    text-align: left;
+    align-self: flex-start;
+    margin-left: 10px;
+    font-size: 0.8rem;
+}
+
 label {
     align-self: flex-start;
     margin-left: 10px;
     font-size: 0.9rem;
-}
-
-#submit {
-    width: auto;
-    padding: 10px 20px;
-    background-color: #1f1f21;
-    color: #ffffff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-#submit:hover {
-    background-color: var(--color_n_2)
+    color: var(--color5);
 }
 
 /* Karussell */
