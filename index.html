@@ -12,14 +12,14 @@
     <main>
         <section class="navigation">
                 <nav>
-                    <a class="menuicon" href=""><img src="symbol_menu.svg" alt=""></a>
+                     <img src="logo.png" alt="" width="40xp">
+                     <a class="menuicon" href=""><img src="symbol_menu.svg" alt=""></a>
                      <ul class="submenu">
                         <li><a href="">Start</a></li>
                         <li><a href="">Gallerie</a></li>
                         <li><a href="">Kontakt</a></li>
                         <li><a href="">Impressum</a></li>
                      </ul>
-                     <img src="logo.png" alt="" width="40xp">
                 </nav>
         </section>
         <section class="about">
@@ -47,11 +47,11 @@
                     <div class="card"><img src="img/20250314_184538.JPG" alt=""></div>
                     <div class="card"><img src="img/PXL_20250710_064700671 (1) (1) (1).JPG" alt=""></div>
                     <div class="card"><img src="img/PXL_20251125_215613890.JPG" alt=""></div>
-                    <div class="card"><img src="iimg/PXL_20250417_082224271.JPG" alt=""></div>
+                    <div class="card"><img src="img/PXL_20250417_082224271.JPG" alt=""></div>
                 </div>
             </div>
             <div class="carousell-container">
-                <h2>Serviertenhalter</h2>
+                <h2>Brillenhalter</h2>
                 <div class="carousell">
                     <div class="card"><img src="img/20250108_101839.JPG" alt=""></div>
                     <div class="card"><img src="img/20250108_101854.JPG" alt=""></div>
@@ -70,6 +70,26 @@
                     <div class="card"><img src="img/PXL_20251113_212514182.JPG" alt=""></div>
                     <div class="card"><img src="img/PXL_20251113_212540867.JPG" alt=""></div>
                     <div class="card"><img src="img/PXL_20251113_212601069.JPG" alt=""></div>
+                </div>
+            </div>
+            <div class="carousell-container">
+                <h2>Herbstdeko</h2>
+                <div class="carousell">
+                    <div class="card"><img src="img/bild_pilz_2 (1).JPG" alt=""></div>
+                    <div class="card"><img src="img/bild_pilz_2 (2).JPG" alt=""></div>
+                    <div class="card"><img src="img/bild_pilz_4 (1).JPG" alt=""></div>
+                    <div class="card"><img src="img/bild_pilz_4 (2).JPG" alt=""></div>
+                    <div class="card"><img src="img/bild_pilz_5.JPG" alt=""></div>
+                </div>
+            </div>
+            <div class="carousell-container">
+                <h2>Muttertageschenk</h2>
+                <div class="carousell">
+                    <div class="card"><img src="img/bild_mama_1.JPG" alt=""></div>
+                    <div class="card"><img src="img/bild_mama_2.JPG" alt=""></div>
+                    <div class="card"><img src="img/bild_mama_3.JPG" alt=""></div>
+                    <div class="card"><img src="img/bild_mama_4.JPG" alt=""></div>
+                    <div class="card"><img src="img/bild_mama_5.JPG" alt=""></div>
                 </div>
             </div>
         </section>
@@ -116,7 +136,6 @@
             <p><a href="#" id="openImpressum">Impressum</a></p>
             <p>Datenshutz</p>
             <p>Nutzungsbedingungen</p>
-            <p>AGB</p>
         </div>
         <div>
             <p class="footer-group copy">© 2025 Shannas Holzpoesie. Alle Rechte vorbehalten.</p>
@@ -140,27 +159,7 @@
     <p><em>Hinweis: Der Betreiber nimmt nicht an einem Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teil.</em></p>
 </div>
 </div>
-    
-<script>
-const overlay = document.getElementById('impressumOverlay');
-const openBtn = document.getElementById('openImpressum');
-const closeBtn = document.getElementById('closeImpressum');
 
-openBtn.addEventListener('click', function(e) {
-  e.preventDefault();
-  overlay.classList.add('active');
-});
-
-closeBtn.addEventListener('click', function() {
-  overlay.classList.remove('active');
-});
-
-// Optional: Overlay schließen, wenn man außerhalb klickt
-overlay.addEventListener('click', function(e) {
-  if(e.target === overlay) {
-    overlay.classList.remove('active');
-  }
-});
-</script>
 </body>
+    <script src="script.js"></script>
 </html>
