@@ -42,16 +42,16 @@
             <div class="carousell-container">
                 <h2>Serviertenhalter/Schnutenwischer</h2>
                 <div class="carousell">
-                    <div class="card"><img src="img/PXL_20250417_082224271.JPG" alt=""></div>
+                    <div class="card"><img src="img/PXL_20250710_064700671 (1) (1) (1).JPG" alt=""></div>
                     <div class="card"><img src="img/20250314_183839.JPG" alt=""></div>
                     <div class="card"><img src="img/20250314_184538.JPG" alt=""></div>
                     <div class="card"><img src="img/PXL_20250710_064700671 (1) (1) (1).JPG" alt=""></div>
                     <div class="card"><img src="img/PXL_20251125_215613890.JPG" alt=""></div>
-                    <div class="card"><img src="img/PXL_20250710_064700671 (1) (1) (1).JPG" alt=""></div>
+                    <div class="card"><img src="iimg/PXL_20250417_082224271.JPG" alt=""></div>
                 </div>
             </div>
             <div class="carousell-container">
-                <h2>Herzanhänger</h2>
+                <h2>Serviertenhalter</h2>
                 <div class="carousell">
                     <div class="card"><img src="img/20250108_101839.JPG" alt=""></div>
                     <div class="card"><img src="img/20250108_101854.JPG" alt=""></div>
@@ -62,7 +62,7 @@
                 </div>
             </div>
             <div class="carousell-container">
-                <h2>Serviertenhalter</h2>
+                <h2>Herzanhänger</h2>
                 <div class="carousell">
                     <div class="card"><img src="img/PXL_20251004_184537077.JPG" alt=""></div>
                     <div class="card"><img src="img/PXL_20251004_184636252.JPG" alt=""></div>
@@ -98,7 +98,7 @@
                     <p class="stern">* Pflichtangaben</p>
                         <div class="nb">
                             <input id="yes" type="checkbox" required>
-                            <p>Ich akzeptiere die Nutzungsbedingungen</p>
+                            <span class="agb">Ich akzeptiere die Nutzungsbedingungen</span>
                         </div>
                     <input id="submit" name="submit" type="submit" value="Senden">
                 </form>
@@ -113,7 +113,7 @@
         </div>
         <div class="footer-group">
             <h4>Rechtliches</h4>
-            <p><a href="#impressum">Impressum</a></p>
+            <p><a href="#" id="openImpressum">Impressum</a></p>
             <p>Datenshutz</p>
             <p>Nutzungsbedingungen</p>
             <p>AGB</p>
@@ -122,5 +122,45 @@
             <p class="footer-group copy">© 2025 Shannas Holzpoesie. Alle Rechte vorbehalten.</p>
         </div>
     </footer>
+    
+    <div id="impressumOverlay">
+  <div class="impressumContent">
+    <span id="closeImpressum">&times;</span>
+    <h2>Impressum</h2>
+    <p>
+      Kevin Kurka<br>
+      Steinstraße 42, 64839 Münster (Hessen)<br>
+      Einzelunternehmer, Kleinunternehmerregelung<br>
+      Email: shanna_linder@yahoo.de<br>
+      Tel.: +49 176 4426 6356<br>
+    </p><br>
+    <p><strong>Umsatzsteuer-ID:</strong> DExxxxxxxxx</p>
+    <p><strong>Inhaltlich Verantwortlicher gemäß § 55 Abs. 2 RStV:</strong> Shanna Kurka</p>
+    <br>
+    <p><em>Hinweis: Der Betreiber nimmt nicht an einem Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teil.</em></p>
+</div>
+</div>
+    
+<script>
+const overlay = document.getElementById('impressumOverlay');
+const openBtn = document.getElementById('openImpressum');
+const closeBtn = document.getElementById('closeImpressum');
+
+openBtn.addEventListener('click', function(e) {
+  e.preventDefault();
+  overlay.classList.add('active');
+});
+
+closeBtn.addEventListener('click', function() {
+  overlay.classList.remove('active');
+});
+
+// Optional: Overlay schließen, wenn man außerhalb klickt
+overlay.addEventListener('click', function(e) {
+  if(e.target === overlay) {
+    overlay.classList.remove('active');
+  }
+});
+</script>
 </body>
 </html>

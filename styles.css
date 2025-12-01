@@ -269,6 +269,7 @@ h1 {
 h2 {
     font-size: 1.0rem;
     margin-bottom: 10px;
+    font-weight: normal;
 }
 
 
@@ -348,14 +349,19 @@ form {
     color: var(--color5);
 }
 
-.nb {
-    margin: 40px 0 0 0;
-    display: flex;
-    justify-content: flex-start;
+.inname:active, input:active, textarea:active, select:active {
+    border: 1px solid var(--color_n_2);
+    box-shadow: 0 0 5px var(--color_n_2);
+    outline: none;
 }
 
-#yes {
-    display: inline-block;
+.nb>input {
+    margin: 0;
+    padding: 0;
+}
+
+.nb {
+    margin: 20px 0 0 0;
 }
 
 .stern {
@@ -376,6 +382,7 @@ label {
 .carousell-container {
     width: 100%;
     overflow: visible;
+    margin: 0 0 40px 0;
 }
 
 .carousell {
@@ -383,6 +390,7 @@ label {
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
+    border-radius: 10px;
 
 }
 
@@ -414,4 +422,42 @@ header {
   overflow: hidden;
 }
 
+.agb {
+    color: var(--color5);
+}
 
+
+/**IMPRESSUM**/
+#impressumOverlay {
+  position: fixed;
+  bottom: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: white;
+  color: black;
+  overflow-y: auto;
+  transition: bottom 0.4s ease;
+  z-index: 9999;
+}
+
+/* Wenn geöffnet */
+#impressumOverlay.active {
+  bottom: 0;
+}
+
+/* Inhalt zentrieren */
+.impressumContent {
+  padding: 2rem;
+  max-width: 600px;
+  margin: auto;
+}
+
+/* Close Button */
+#closeImpressum {
+  font-size: 2rem;
+  cursor: pointer;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
