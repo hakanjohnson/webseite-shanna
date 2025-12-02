@@ -1,6 +1,6 @@
-const overlay = document.getElementById('impressumOverlay');
-const openBtn = document.getElementById('openImpressum');
-const closeBtn = document.getElementById('closeImpressum');
+const overlay = document.getElementById('NutzungsbedingungenOverlay');
+const openBtn = document.getElementById('openNutzungsbedingungen');
+const closeBtn = document.getElementById('closeNutzungsbedingungen');
 
 openBtn.addEventListener('click', function(e) {
   e.preventDefault();
@@ -17,4 +17,3 @@ overlay.addEventListener('click', function(e) {
     overlay.classList.remove('active');
   }
 });
-
