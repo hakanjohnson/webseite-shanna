@@ -2,22 +2,14 @@
 
 :root {
     /*Hauptfarben*/
-    --color1: #e9c2a1;
-    --color2: #f8eeee;
-    --color3: #ff0000;
-    --color4: #776D61;
-    --color5: #7f6f62;
-
-    /*Nebenfarben*/
-    --color_n_1: #351748;
-    --color_n_2: #d98908;
+    --color1: #f3b9c2;
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: system-ui, "Stack Sans Notch", sans-serif;
+    font-family: system-ui, sans-serif;
     font-optical-sizing: auto;
     font-size: 16px;
     scroll-behavior: smooth;
@@ -25,7 +17,7 @@
 
 body {
     scroll-behavior: smooth;
-    background-color: var(--color2);
+    background-color: #f6f6f6;
     display: flex;
     width: 100%;
     flex-direction: column;
@@ -65,17 +57,23 @@ main {
     background-image: url("img/hero3\ \(2\).jpg");
     background-size: cover;
     background-position: center;
-    filter: brightness(0.3) blur(1px); /* Abdunkeln + Unschärfe */
+    filter: brightness(0.4) blur(2px); /* Abdunkeln + Unschärfe */
     z-index: -1;
 }
 
 .header1_farbe {
-    color: var(--color_n_2);
+        /*Chrome IE...*/
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /*FF*/
+    background-clip: text;
+    color: transparent;
+    background-image: linear-gradient(45deg,#f3b9c2, #e27c99, #f3b9c2);
     
 }
 
 p {
-    color: var(--color5);
+    color: #555555;
 }
 
 .content {
@@ -107,7 +105,7 @@ p {
 }
 
 .skill, .greeting{
-    background-color: var(--color1);
+    background-color: #f6f6f6;
     width: 90%;
     height: auto;
     border-radius: 10px;
@@ -118,7 +116,7 @@ p {
 }
 
 .button_gold, #submit {
-    background-color: var(--color_n_2);
+    background-image: linear-gradient(45deg,#f3b9c2, #e27c99, #f3b9c2);
     width: auto;
     height: auto;
     display: flex;
@@ -128,17 +126,19 @@ p {
     padding: 10px 20px;
     border: none;
     cursor: pointer;
-    color: var(--color2);
+    color: #eeeeee;
     font-weight: bold;
     border-radius: 5px;
 }
 
 .kontakt {
-    background-color: var(--color2);
+    background-color: #f6f6f6;
 }
 
 .name {
     font-size: 3rem;
+    font-family: system-ui, "Pacifico", cursive;
+    color: #f8c9eb;
 }
 
 .titel {
@@ -149,7 +149,7 @@ p {
     font-size: 1rem;
 }
 
-.name, .titel, .spruch {
+.name {
     /*Chrome IE...*/
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -159,11 +159,12 @@ p {
 }
 
 .titel, .spruch {
-    background-image: linear-gradient(to right, var(--color2), var(--color_n_2));
+    color: white;;
 }
 
 .name {
-    background-image: linear-gradient(to right, var(--color2));
+    background-color: white;
+    /*background-image: linear-gradient(to right, #68f55b 20%, #f834c0);*/
 }
 
 section {
@@ -172,8 +173,8 @@ section {
 
 .gallerie {
     min-height: auto;
-    background-color: white;
-    color: var(--color5);
+    background-color: #f6f6f6;
+    color: var(--color1);
     padding: 30px 0;
 }
 
@@ -214,7 +215,7 @@ li>a {
 }
 
 li>a:hover{
-    color: var(--color_n_2);
+    color: var(--color1);
 }
 li {
     list-style: none;
@@ -232,7 +233,7 @@ li {
     width: 250px;
     height: 250px;
     object-fit: scale-down;
-    border: solid 5px var(--color_n_2);
+    border: solid 5px var(--color1);
     border-radius: 100%;
     margin-bottom: 20px;
     box-shadow: 0 0 20px 1px black;
@@ -251,18 +252,24 @@ li {
 
 a {
     text-decoration: none;
-    color: var(--color5);
+    color: #555555;
 }
 h1 {
     font-size: 2.0rem;
     margin-bottom: 10px;
-    color: var(--color_n_2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /*FF*/
+    background-clip: text;
+    color: transparent;
+    background-image: linear-gradient(45deg,#f3b9c2, #ffbdf4, #ffb8c3);
 }
 
 h2 {
     font-size: 1.0rem;
     margin-bottom: 10px;
     font-weight: normal;
+    color: #555555;
 }
 
 
@@ -271,8 +278,8 @@ footer, footer-group {
     padding: 20px;
     text-align: center;
     width: 100%;
-    background-color: var(--color1);
-    color: var(--color5);
+    background-color: #f8c9eb;
+    color: #555555;
 }
 
 @media (min-width: 400px) {
@@ -306,7 +313,8 @@ footer, footer-group {
 .copy 
 {
     font-size: 0.7rem;
-    color: var(--color5);
+    color: #555555;
+    font-weight: bolder;
 }
 
 .logo {
@@ -323,7 +331,7 @@ footer, footer-group {
 }
 
 .bgGelb {
-    background-color: #ededed
+    background-color: #f6f6f6;
 }
 
 form {
@@ -344,12 +352,12 @@ form {
     border-radius: 4px;
     cursor: pointer;
     margin-bottom: 2rem;
-    color: var(--color5);
+    color: #555555;
 }
 
-.inname:active, input:active, textarea:active, select:active {
-    border: 1px solid var(--color_n_2);
-    box-shadow: 0 0 5px var(--color_n_2);
+.inname:focus-within, input:focus-within, textarea:focus-within, select:focus-within {
+    border: 1px solid var(--color1);
+    box-shadow: 0 0 5px var(--color1);
     outline: none;
 }
 
@@ -371,13 +379,14 @@ form {
     align-self: flex-start;
     margin-left: 10px;
     font-size: 0.8rem;
+    color:#555555;
 }
 
 label {
     align-self: flex-start;
     margin-left: 10px;
     font-size: 0.9rem;
-    color: var(--color5);
+    color: #555555;
 }
 
 /* Karussell */
@@ -394,7 +403,6 @@ label {
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
-    border-radius: 10px;
 
 }
 
@@ -407,9 +415,9 @@ label {
     width: 100%;
     height: 400px;
     flex: 0 0 100%;
-    scroll-snap-align: start;
+    scroll-snap-align: left;
     overflow: hidden;
-    color: #303030;
+    color: #555555;
 }
 
 .card img {
@@ -427,7 +435,7 @@ header {
 }
 
 .agb {
-    color: var(--color5);
+    color: #555555;
     font-size: 0.8rem;
     margin-left: 5px;
 }
@@ -463,41 +471,6 @@ header {
 
 /* Close Button */
 #closeImpressum {
-  font-size: 2rem;
-  cursor: pointer;
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-}
-
-/* Nutzungsbedingungen */
-#NutzungsbedingungenOverlay {
-  position: fixed;
-  bottom: -100%;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: white;
-  color: black;
-  overflow-y: auto;
-  transition: bottom 0.4s ease;
-  z-index: 9999;
-}
-
-/* Wenn geöffnet */
-#NutzungsbedingungenOverlay.active {
-  bottom: 0;
-}
-
-/* Inhalt zentrieren */
-.NutzungsbedingungenContent {
-  padding: 2rem;
-  max-width: 600px;
-  margin: auto;
-}
-
-/* Close Button */
-#closeNutzungsbedingungen {
   font-size: 2rem;
   cursor: pointer;
   position: absolute;
