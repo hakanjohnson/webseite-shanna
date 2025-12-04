@@ -443,7 +443,7 @@ header {
   background: white;
   color: black;
   overflow-y: auto;
-  transition: bottom 0.4s ease;
+  transition: bottom 1.0s ease;
   z-index: 9999;
 }
 
@@ -456,7 +456,9 @@ header {
 .impressumContent {
   padding: 2rem;
   max-width: 600px;
-  margin: auto;
+
+  display: flex;
+  flex-direction: column;
 }
 
 /* Close Button */
