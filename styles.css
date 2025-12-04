@@ -62,13 +62,8 @@ main {
 }
 
 .header1_farbe {
-        /*Chrome IE...*/
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    /*FF*/
-    background-clip: text;
-    color: transparent;
-    background-image: linear-gradient(45deg,#f3b9c2, #e27c99, #f3b9c2);
+
+    background-color: #f3b9c2;
     
 }
 
@@ -137,8 +132,9 @@ p {
 
 .name {
     font-size: 3rem;
-    font-family: system-ui, "Pacifico", cursive;
+    font-family:  "Pacifico", system-ui, cursive;
     color: #f8c9eb;
+    font-weight: lighter;
 }
 
 .titel {
@@ -149,14 +145,13 @@ p {
     font-size: 1rem;
 }
 
-.name {
-    /*Chrome IE...*/
+/*.name {
+
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    /*FF*/
     background-clip: text;
     color: transparent;
-}
+}*/
 
 .titel, .spruch {
     color: white;;
@@ -278,8 +273,12 @@ footer, footer-group {
     padding: 20px;
     text-align: center;
     width: 100%;
-    background-color: #f8c9eb;
-    color: #555555;
+    background-image: linear-gradient(45deg,#f3b9c2, #f98cab, #f3b9c2);
+    color: #ffffff;
+}
+
+.ftext {
+   color: #ffffff; 
 }
 
 @media (min-width: 400px) {
@@ -299,7 +298,7 @@ footer, footer-group {
 }
 
 .name {
-    font-size: 2.5rem;
+    font-size: 2.8rem;
 }
 
 .titel {
@@ -313,7 +312,7 @@ footer, footer-group {
 .copy 
 {
     font-size: 0.7rem;
-    color: #555555;
+    color: #ffffff;
     font-weight: bolder;
 }
 
