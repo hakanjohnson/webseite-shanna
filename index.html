@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shannas Holpoesie</title>
+    <link rel="icon" type="image/png" href="favicon.png"> 
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="bilderGallerie.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=menu" />
@@ -15,16 +16,18 @@
 <body>
     <main>
         <section class="navigation">
-                <nav>
-                     <a href="#"><img src="logo.png" alt="" width="40xp"></a>
-                     <a class="menuicon" href=""><img src="symbol_menu.svg" alt=""></a>
-                     <ul class="submenu">
-                        <li><a href="">Start</a></li>
-                        <li><a href="">Gallerie</a></li>
-                        <li><a href="">Kontakt</a></li>
-                        <li><a href="">Impressum</a></li>
-                     </ul>
-                </nav>
+            <nav class="nav-container">
+                <a class="menuicon" href="#">
+                    <img src="symbol_menu.svg" alt="Menü öffnen">
+                </a>
+
+                <ul class="submenu">
+                    <li><a href="">Start</a></li>
+                    <li><a href="">Galerie</a></li>
+                    <li><a href="">Kontakt</a></li>
+                    <li><a href="">Impressum</a></li>
+                </ul>
+            </nav>
         </section>
         <section class="about">
             <div>
@@ -35,6 +38,7 @@
                 <p class="spruch">Deko- & Geschenkideen aus Holz und Trockenblumen</p>
             </div>
             <a class="button_gold" href="#kontakt">Jetzt Kontaktieren</a>
+            <a class="button_sekundär" href="#gallerie">Meine Kunstwerke</a>
         </section>
         <!--<section class="content">
             <img class="pp" src="profil.png" alt="">
@@ -42,13 +46,13 @@
             <p>Ich bin Shanna und leidenschaftliche Bastlerin. Ich stelle in lieverboller Handarbeit Dekorationen und Geschehnke aus Holz und Trockenblumen her. </p>
         </section>-->
 
-         <!--<section class="content">
-            <img class="pp" src="profil.png" alt="">
+        <section class="content">
+            <img class="pp" src="logo.png" alt="logo">
             <h1 class="header1_farbe">Herzlich Willkommen</h1>
-            <p>In lieverboller Handarbeit erstellte Dekorationen und Geschehnke aus Holz und Trockenblumen her. </p>
-        </section>-->
+            <p>In lieverboller Handarbeit erstellte Dekorationen und Geschehnke aus Holz und Trockenblumen. Auch individuelle Anfertigungen sind möglich.  </p>
+        </section>
         
-        <section class="gallerie">
+        <section id="gallerie" class="gallerie">
             <h1 class="header1_farbe">Meine Kunstwerke</h1>
             <div class="carousell-container">
                 <h2>Serviertenhalter/Schnutenwischer</h2>
@@ -105,7 +109,7 @@
             </div>
         </section>
         <section id="kontakt" class="content kontakt">
-            <h1>Schreib Mir</h1>
+            <h1>Kontakt</h1>
             <p>Fülle das Formular aus und ich melde mich bei dir</p>
             <div class="formular">
                 <form action="sendForm.php">
@@ -129,7 +133,7 @@
                     <p class="stern">* Pflichtangaben</p>
                         <div class="nb">
                             <input id="yes" type="checkbox" required>
-                            <span class="agb">Ich akzeptiere die Nutzungsbedingungen</span>
+                            <span class="agb">Ich akzeptiere die Datenschutzbedigungen.</span>
                         </div>
                     <input id="submit" name="submit" type="submit" value="Senden">
                 </form>
@@ -139,9 +143,8 @@
     <footer>
         <div class="footer-group">
             <h4>Rechtliches</h4>
-            <p><a href="#" id="openImpressum">Impressum</a></p>
-            <p><a href="#" id="openDatenshutz">Datenshutz</a></p>
-            <p><a href="#" id="openNutzungsbedingungen">Nutzungsbedingungen</a></p>
+            <p><a class="ftext" href="#" id="openImpressum">Impressum</a></p>
+            <p><a class="ftext" href="#" id="openDatenshutz">Datenshutz</a></p>
         </div>
         <div>
             <p class="footer-group copy">© 2025 Shannas Holzpoesie. Alle Rechte vorbehalten.</p>
@@ -170,5 +173,4 @@
 </body>
     <script src="script.js"></script>
     <script src="bilderGallerie.js"></script>
-    <script src="nube.js"></script>
 </html>
